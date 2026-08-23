@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kora Commercial — Homepage Sample v2</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sauce+One:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #EFEFEB;
+    font-family: 'Open Sauce One', sans-serif;
+    color: #000;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  section { padding: 0 32px; }
+
+  /* NOTE: swap this one variable once a headline typeface is chosen from the comparison */
+  :root { --headline-font: 'DM Serif Display', serif; }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  nav img { height: 72px; display: block; }
+  nav .links { display: flex; gap: 32px; font-size: 13px; }
+
+  .hero-block {
+    position: relative;
+  }
+  .hero-visual {
+    padding-top: 72px;
+  }
+  .hero-visual img {
+    width: 100%;
+    display: block;
+  }
+  .hero {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    max-width: 680px;
+    padding: 0 32px;
+  }
+  .rule { width: 44px; height: 4px; background: #2C3E5C; margin-bottom: 22px; }
+  .hero h1 {
+    font-family: var(--headline-font);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+  .hero p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.65;
+    margin-bottom: 30px;
+    max-width: 560px;
+  }
+  .cta {
+    display: inline-block;
+    background: #2C3E5C;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 14px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .cta.secondary {
+    background: transparent;
+    color: #2C3E5C;
+    border: 1px solid #2C3E5C;
+  }
+
+  .services-intro {
+    padding: 96px 32px 8px;
+  }
+  .services-intro h2 {
+    font-family: var(--headline-font);
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  /* Full-width scrolling service sections, alternating image side */
+  .service-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    min-height: 420px;
+  }
+  .service-row.reverse .service-media { order: 2; }
+  .service-row.reverse .service-text { order: 1; }
+
+  .service-media {
+    background: #D9DAD2;
+    height: 100%;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #8a8a84;
+    letter-spacing: 0.05em;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+  }
+  .service-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+  .service-text {
+    padding: 56px 64px;
+  }
+  .service-text .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #2C3E5C;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .service-text h3 {
+    font-family: var(--headline-font);
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+  .service-text p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 420px;
+  }
+  .service-text .link {
+    font-size: 12px;
+    color: #2C3E5C;
+    font-weight: 700;
+  }
+
+  .about {
+    padding: 96px 32px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    max-width: 720px;
+  }
+  .about .label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #777775;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .about p {
+    font-family: var(--headline-font);
+    font-size: 24px;
+    line-height: 1.5;
+    color: #000;
+  }
+
+  .closing {
+    background: #2C3E5C;
+    padding: 88px 32px;
+    text-align: center;
+  }
+  .closing h2 {
+    font-family: var(--headline-font);
+    font-weight: 400;
+    font-size: 32px;
+    color: #fff;
+    max-width: 640px;
+    margin: 0 auto 28px;
+    line-height: 1.35;
+  }
+  .closing .cta { background: #fff; color: #2C3E5C; }
+
+  footer {
+    padding: 40px 32px;
+    font-size: 12px;
+    color: #777775;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer .brandline { letter-spacing: 0.05em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <img src="brand-assets/kora-commercial-logo-black-transparent.png" alt="Kora Commercial logo">
+    <div class="links">
+      <span>Kora Intelligence</span>
+      <span>Kora Digital</span>
+      <span>Referral Network</span>
+      <span>About</span>
+    </div>
+  </nav>
+
+  <div class="hero-block">
+    <div class="hero-visual">
+      <img src="brand-assets/photography/skyline3-transparent-gray.png" alt="Line-art illustration of the Lower Manhattan skyline">
+    </div>
+    <section class="hero">
+      <div class="rule"></div>
+      <h1>Precision research.<br>More deals.</h1>
+      <p>Kora Commercial pairs AI-assisted market research, real estate web design, and a referral agent network to boost NYC commercial brokers.</p>
+      <a href="#" class="cta">Get research support</a>
+    </section>
+  </div>
+
+  <section class="services-intro">
+    <h2>Our services</h2>
+  </section>
+
+  <div class="service-row">
+    <div class="service-media"><img src="brand-assets/photography/building-stack-bw-square.jpg" alt="Illustrated building stacking plan showing floor-by-floor availability and pricing"></div>
+    <div class="service-text">
+      <div class="eyebrow">KORA INTELLIGENCE</div>
+      <h3>Research &amp; deck support</h3>
+      <p>AI-assisted market research and deck-building, delivered in 1&ndash;5 business days.</p>
+      <div class="link">Learn more &rarr;</div>
+    </div>
+  </div>
+
+  <div class="service-row reverse">
+    <div class="service-media"><img src="brand-assets/photography/woman-illustration-square.jpg" alt="Illustration of a professional reviewing a floor plan on a computer screen"></div>
+    <div class="service-text">
+      <div class="eyebrow">KORA DIGITAL</div>
+      <h3>Web &amp; newsletter design</h3>
+      <p>A website, a landing page built for landlords or clients and matching newsletter templates &mdash; one flat project fee, no agency retainer.</p>
+      <div class="link">See sample work &rarr;</div>
+    </div>
+  </div>
+
+  <div class="service-row">
+    <div class="service-media"><img src="brand-assets/photography/handshake-square.jpg" alt="Illustration of two people shaking hands"></div>
+    <div class="service-text">
+      <div class="eyebrow">REFERRAL NETWORK</div>
+      <h3>Grow your business</h3>
+      <p>Hang referral licensees with Kora Commercial and turn your network into income.</p>
+      <div class="link">Become an agent &rarr;</div>
+    </div>
+  </div>
+
+  <div class="about">
+    <div class="label">ABOUT KORA COMMERCIAL</div>
+    <p>Kora Commercial is a New York City real estate brokerage built on precision, discretion, and market fluency &mdash; combining AI-assisted research with hands-on relationships across NYC's commercial real estate community.</p>
+  </div>
+
+  <div class="closing">
+    <h2>Precision and discretion, built into every deal.</h2>
+    <a href="#" class="cta">Get in touch</a>
+  </div>
+
+  <footer>
+    <div class="brandline">KORACOMMERCIAL.COM &nbsp;&middot;&nbsp; NY LICENSED REAL ESTATE BROKERAGE</div>
+    <div>hello@koracommercial.com</div>
+  </footer>
+
+</div>
+</body>
+</html>
