@@ -119,66 +119,70 @@
     font-size: 32px;
   }
 
-  /* Full-width scrolling service sections, alternating image side */
-  .service-row {
+  /* Service cards */
+  .service-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 0;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    min-height: 420px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 8px 32px 96px;
   }
-  .service-row.reverse .service-media { order: 2; }
-  .service-row.reverse .service-text { order: 1; }
-
-  .service-media {
-    background: #D9DAD2;
-    height: 100%;
-    min-height: 420px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: #8a8a84;
-    letter-spacing: 0.05em;
-    text-align: center;
-    padding: 0;
+  .service-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
     overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
   }
-  .service-media img {
+  .service-card img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
     display: block;
+    transition: transform 0.5s ease;
   }
-  .service-text {
-    padding: 56px 64px;
+  .service-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.18) 45%, rgba(0,0,0,0) 65%);
   }
-  .service-text .eyebrow {
+  .service-card .card-label {
+    position: absolute;
+    left: 26px;
+    right: 26px;
+    bottom: 24px;
+    z-index: 2;
+  }
+  .card-label .eyebrow {
     font-size: 11px;
     letter-spacing: 0.08em;
-    color: #2C3E5C;
+    color: #B7C2D6;
     font-weight: 700;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
-  .service-text h3 {
+  .card-label h3 {
     font-family: var(--headline-font);
     font-weight: 400;
-    font-size: 30px;
-    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #fff;
   }
-  .service-text p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 20px;
-    max-width: 420px;
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 34px rgba(0,0,0,0.18);
   }
-  .service-text .link {
-    font-size: 12px;
-    color: #2C3E5C;
-    font-weight: 700;
+  .service-card:hover img {
+    transform: scale(1.06);
+  }
+  .service-card:focus-visible {
+    outline: 2px solid #2C3E5C;
+    outline-offset: 3px;
   }
 
   .about {
@@ -263,16 +267,12 @@
     .services-intro { padding: 56px 20px 4px; }
     .services-intro h2 { font-size: 24px; }
 
-    .service-row {
+    .service-grid {
       grid-template-columns: 1fr;
-      min-height: 0;
+      gap: 16px;
+      padding: 8px 20px 56px;
     }
-    .service-row .service-media { order: 1 !important; }
-    .service-row .service-text { order: 2 !important; }
-    .service-media { min-height: 280px; }
-    .service-text { padding: 28px 20px; }
-    .service-text h3 { font-size: 24px; }
-    .service-text p { max-width: 100%; }
+    .card-label h3 { font-size: 22px; }
 
     .about { padding: 56px 20px; }
     .about p { font-size: 19px; }
@@ -325,34 +325,28 @@
     <h2>Our services</h2>
   </section>
 
-  <div class="service-row">
-    <div class="service-media"><img src="brand-assets/photography/building-stack-bw-square.jpg" alt="Illustrated building stacking plan showing floor-by-floor availability and pricing"></div>
-    <div class="service-text">
-      <div class="eyebrow">KORA INTELLIGENCE</div>
-      <h3>Research &amp; deck support</h3>
-      <p>AI-assisted market research and deck-building, delivered in 1&ndash;5 business days.</p>
-      <div class="link">Learn more &rarr;</div>
-    </div>
-  </div>
-
-  <div class="service-row reverse">
-    <div class="service-media"><img src="brand-assets/photography/woman-illustration-square.jpg" alt="Illustration of a professional reviewing a floor plan on a computer screen"></div>
-    <div class="service-text">
-      <div class="eyebrow">KORA DIGITAL</div>
-      <h3>Web &amp; newsletter design</h3>
-      <p>A website, a landing page built for landlords or clients and matching newsletter templates &mdash; one flat project fee, no agency retainer.</p>
-      <div class="link">See sample work &rarr;</div>
-    </div>
-  </div>
-
-  <div class="service-row">
-    <div class="service-media"><img src="brand-assets/photography/skyline-park-square.jpg" alt="Line-art illustration of a Manhattan skyscraper overlooking Central Park"></div>
-    <div class="service-text">
-      <div class="eyebrow">REFERRAL NETWORK</div>
-      <h3>Grow your business</h3>
-      <p>Hang referral licensees with Kora Commercial and turn your network into income.</p>
-      <div class="link">Become an agent &rarr;</div>
-    </div>
+  <div class="service-grid">
+    <a href="#" class="service-card">
+      <img src="brand-assets/photography/building-stack-bw-square.jpg" alt="Illustrated building stacking plan showing floor-by-floor availability and pricing">
+      <div class="card-label">
+        <div class="eyebrow">KORA INTELLIGENCE</div>
+        <h3>Research &amp; deck support</h3>
+      </div>
+    </a>
+    <a href="#" class="service-card">
+      <img src="brand-assets/photography/woman-illustration-square.jpg" alt="Illustration of a professional reviewing a floor plan on a computer screen">
+      <div class="card-label">
+        <div class="eyebrow">KORA DIGITAL</div>
+        <h3>Web &amp; newsletter design</h3>
+      </div>
+    </a>
+    <a href="#" class="service-card">
+      <img src="brand-assets/photography/skyline-park-square.jpg" alt="Line-art illustration of a Manhattan skyscraper overlooking Central Park">
+      <div class="card-label">
+        <div class="eyebrow">REFERRAL NETWORK</div>
+        <h3>Grow your business</h3>
+      </div>
+    </a>
   </div>
 
   <div class="about">
