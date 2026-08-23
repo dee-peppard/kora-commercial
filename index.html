@@ -19,6 +19,7 @@
   :root { --headline-font: 'DM Serif Display', serif; }
 
   nav {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,6 +28,38 @@
   }
   nav img { height: 72px; display: block; }
   nav .links { display: flex; gap: 32px; font-size: 13px; }
+
+  .menu-toggle { display: none; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #000;
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 24px 32px 28px;
+    background: #EFEFEB;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    font-size: 15px;
+    z-index: 20;
+  }
+  .menu-toggle:checked ~ .mobile-menu { display: flex; }
 
   .hero-block {
     position: relative;
@@ -192,6 +225,56 @@
     gap: 16px;
   }
   footer .brandline { letter-spacing: 0.05em; }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    nav img { height: 52px; }
+    nav .links { display: none; }
+    .hamburger { display: flex; }
+
+    .hero-block {
+      display: flex;
+      flex-direction: column;
+    }
+    .hero {
+      position: static;
+      order: 1;
+      max-width: 100%;
+      padding: 32px 20px 0;
+    }
+    .hero-visual {
+      order: 2;
+      padding-top: 32px;
+    }
+    .rule { margin-bottom: 16px; }
+    .hero h1 { font-size: 30px; margin-bottom: 14px; }
+    .hero p { font-size: 15px; margin-bottom: 22px; }
+    .cta { width: 100%; text-align: center; }
+
+    .services-intro { padding: 56px 20px 4px; }
+    .services-intro h2 { font-size: 24px; }
+
+    .service-row {
+      grid-template-columns: 1fr;
+      min-height: 0;
+    }
+    .service-row .service-media { order: 1 !important; }
+    .service-row .service-text { order: 2 !important; }
+    .service-media { min-height: 280px; }
+    .service-text { padding: 28px 20px; }
+    .service-text h3 { font-size: 24px; }
+    .service-text p { max-width: 100%; }
+
+    .about { padding: 56px 20px; }
+    .about p { font-size: 19px; }
+
+    .closing { padding: 56px 20px; }
+    .closing h2 { font-size: 24px; }
+    .closing .cta { width: auto; }
+
+    footer { padding: 28px 20px; flex-direction: column; gap: 8px; }
+  }
 </style>
 </head>
 <body>
@@ -200,6 +283,16 @@
   <nav>
     <img src="brand-assets/kora-commercial-logo-black-transparent.png" alt="Kora Commercial logo">
     <div class="links">
+      <span>Kora Intelligence</span>
+      <span>Kora Digital</span>
+      <span>Referral Network</span>
+      <span>About</span>
+    </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+    <div class="mobile-menu">
       <span>Kora Intelligence</span>
       <span>Kora Digital</span>
       <span>Referral Network</span>
