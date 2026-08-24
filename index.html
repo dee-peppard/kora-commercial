@@ -186,9 +186,24 @@
   }
 
   .about {
+    display: flex;
+    align-items: flex-start;
+    gap: 56px;
     padding: 96px 32px;
     border-top: 1px solid rgba(0,0,0,0.08);
-    max-width: 720px;
+    max-width: 920px;
+  }
+  .about-logo {
+    flex: 0 0 140px;
+  }
+  .about-logo img {
+    width: 140px;
+    height: auto;
+    display: block;
+  }
+  .about-content {
+    flex: 1;
+    max-width: 640px;
   }
   .about .label {
     font-size: 11px;
@@ -274,7 +289,9 @@
     }
     .card-label h3 { font-size: 22px; }
 
-    .about { padding: 56px 20px; }
+    .about { flex-direction: column; gap: 24px; padding: 56px 20px; }
+    .about-logo { flex: 0 0 auto; }
+    .about-logo img { width: 96px; }
     .about p { font-size: 19px; }
 
     .closing { padding: 56px 20px; }
@@ -350,8 +367,13 @@
   </div>
 
   <div class="about">
-    <div class="label">ABOUT KORA COMMERCIAL</div>
-    <p>Kora Commercial is a New York City real estate brokerage built on precision, discretion, and market fluency &mdash; combining AI-assisted research with hands-on relationships across NYC's commercial real estate community.</p>
+    <div class="about-logo">
+      <img src="brand-assets/kora-logo-mark.png" alt="Kora Commercial logo mark">
+    </div>
+    <div class="about-content">
+      <div class="label">ABOUT KORA COMMERCIAL</div>
+      <p>Kora Commercial is a New York City real estate brokerage built on precision, discretion, and market fluency &mdash; combining AI-assisted research with hands-on relationships across NYC's commercial real estate community.</p>
+    </div>
   </div>
 
   <div class="closing">
