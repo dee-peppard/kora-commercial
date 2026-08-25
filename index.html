@@ -187,24 +187,25 @@
 
   .about {
     display: flex;
-    align-items: flex-start;
-    gap: 56px;
+    align-items: center;
+    gap: 48px;
     padding: 96px 32px;
     border-top: 1px solid rgba(0,0,0,0.08);
-    max-width: 920px;
+    max-width: 1040px;
   }
   .about-logo {
-    flex: 0 0 220px;
+    flex: 0 0 560px;
   }
   .about-logo img,
   .about-logo video {
-    width: 220px;
+    width: 560px;
     height: auto;
     display: block;
+    background: #EFEFEB;
   }
   .about-content {
     flex: 1;
-    max-width: 640px;
+    max-width: 440px;
   }
   .about .label {
     font-size: 11px;
@@ -293,7 +294,7 @@
     .about { flex-direction: column; gap: 24px; padding: 56px 20px; }
     .about-logo { flex: 0 0 auto; }
     .about-logo img,
-    .about-logo video { width: 140px; }
+    .about-logo video { width: 220px; }
     .about p { font-size: 19px; }
 
     .closing { padding: 56px 20px; }
