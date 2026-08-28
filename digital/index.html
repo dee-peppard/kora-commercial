@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kora Intelligence — Kora Commercial</title>
+<title>Kora Digital — Kora Commercial</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sauce+One:wght@400;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -114,49 +114,32 @@
     line-height: 1.1;
   }
 
-  /* Feature: stacked images left, copy right */
-  .intel-feature {
-    display: flex;
-    align-items: center;
-    gap: 56px;
+  /* What's included */
+  .digital-feature {
     padding: 96px 32px 48px;
     border-top: 1px solid rgba(0,0,0,0.08);
+    max-width: 640px;
   }
-  .intel-feature-images {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 0 0 420px;
-  }
-  .intel-feature-images img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .intel-feature-text {
-    flex: 1;
-    max-width: 460px;
-  }
-  .intel-feature-text .eyebrow {
+  .digital-feature .eyebrow {
     font-size: 11px;
     letter-spacing: 0.08em;
     color: #2C3E5C;
     font-weight: 700;
     margin-bottom: 16px;
   }
-  .intel-feature-text .lead {
+  .digital-feature .lead {
     font-family: var(--headline-font);
-    font-size: 26px;
+    font-size: 28px;
     line-height: 1.4;
     margin-bottom: 20px;
   }
-  .intel-feature-text .body {
+  .digital-feature .body {
     font-size: 15px;
     line-height: 1.75;
     color: #555;
   }
 
-  /* Featured transactions */
+  /* Featured work */
   .transactions {
     padding: 48px 0 96px;
   }
@@ -284,9 +267,8 @@
       padding-top: 12px;
     }
 
-    .intel-feature { flex-direction: column; gap: 24px; padding: 56px 20px 32px; }
-    .intel-feature-images { flex: 0 0 auto; width: 100%; }
-    .intel-feature-text .lead { font-size: 21px; }
+    .digital-feature { padding: 56px 20px 32px; }
+    .digital-feature .lead { font-size: 21px; }
 
     .transactions { padding: 32px 0 56px; }
     .transactions-intro { padding: 0 20px 20px; }
@@ -308,8 +290,8 @@
   <nav>
     <a href="/"><img src="../brand-assets/kora-commercial-logo-black-transparent.png" alt="Kora Commercial logo"></a>
     <div class="links">
-      <a href="/intelligence" class="active">Kora Intelligence</a>
-      <a href="/digital">Kora Digital</a>
+      <a href="/intelligence">Kora Intelligence</a>
+      <a href="/digital" class="active">Kora Digital</a>
       <a href="#">Referral Network</a>
       <a href="#">About</a>
     </div>
@@ -318,8 +300,8 @@
       <span></span><span></span><span></span>
     </label>
     <div class="mobile-menu">
-      <a href="/intelligence" class="active">Kora Intelligence</a>
-      <a href="/digital">Kora Digital</a>
+      <a href="/intelligence">Kora Intelligence</a>
+      <a href="/digital" class="active">Kora Digital</a>
       <a href="#">Referral Network</a>
       <a href="#">About</a>
     </div>
@@ -327,50 +309,44 @@
 
   <div class="hero-block">
     <div class="hero-visual">
-      <img src="../brand-assets/photography/building-stack-hero-full-transparent.png" alt="Illustrated building stacking plan showing floor-by-floor availability and pricing">
+      <img src="../brand-assets/photography/digital-hero-transparent.png" alt="Line-art illustration of a professional reviewing a floor plan on a computer screen">
     </div>
     <div class="hero-right">
       <div class="rule"></div>
-      <h1>Kora Intelligence</h1>
+      <h1>Kora Digital</h1>
     </div>
   </div>
 
-  <div class="intel-feature">
-    <div class="intel-feature-images">
-      <img src="../brand-assets/photography/intelligence-feature-1.jpg" alt="Line-art illustration of a conference room overlooking the Manhattan skyline">
-      <img src="../brand-assets/photography/intelligence-feature-2.jpg" alt="Line-art illustration of a broker team touring an open commercial space">
-    </div>
-    <div class="intel-feature-text">
-      <div class="eyebrow">HOW IT WORKS</div>
-      <p class="lead">AI-assisted research. Custom-built decks. Fast turnaround.</p>
-      <p class="body">Kora Intelligence pairs AI-assisted market research with hands-on deal support &mdash; from live call assistance to a fully customized deck, built around real-time market data and fitted to each broker's format. Every engagement moves fast, with most decks delivered in one to five business days, so brokers never lose momentum on a live deal.</p>
-    </div>
+  <div class="digital-feature">
+    <div class="eyebrow">WHAT'S INCLUDED</div>
+    <p class="lead">One cohesive system. One flat fee.</p>
+    <p class="body">Kora Digital designs a website, a landing page built around your ideal client, and branded email newsletter templates &mdash; all sharing one visual identity from the start. One flat project fee, with no agency retainer and no disconnected pieces.</p>
   </div>
 
   <div class="transactions">
     <div class="transactions-intro">
-      <h2>Featured transactions</h2>
+      <h2>Featured work</h2>
     </div>
     <div class="service-grid">
       <a href="#" class="service-card">
+        <img src="../brand-assets/photography/woman-illustration-square.jpg" alt="Illustration of a professional reviewing a floor plan on a computer screen">
+        <div class="card-label">
+          <div class="eyebrow">WEBSITE DESIGN</div>
+          <h3>Full site redesign, Upper East Side landlord</h3>
+        </div>
+      </a>
+      <a href="#" class="service-card">
         <img src="../brand-assets/photography/skyline-park-square.jpg" alt="Line-art illustration of a Manhattan skyscraper overlooking Central Park">
         <div class="card-label">
-          <div class="eyebrow">TENANT REPRESENTATION</div>
-          <h3>40,000 SF headquarters relocation, Plaza District</h3>
+          <div class="eyebrow">LANDING PAGE</div>
+          <h3>Targeted landing page, boutique brokerage</h3>
         </div>
       </a>
       <a href="#" class="service-card">
         <img src="../brand-assets/photography/building-stack-bw-square.jpg" alt="Illustrated building stacking plan showing floor-by-floor availability and pricing">
         <div class="card-label">
-          <div class="eyebrow">SUBLEASE DISPOSITION</div>
-          <h3>Full-floor sublease disposition, Financial District</h3>
-        </div>
-      </a>
-      <a href="#" class="service-card">
-        <img src="../brand-assets/photography/intelligence-feature-1.jpg" alt="Line-art illustration of a conference room overlooking the Manhattan skyline">
-        <div class="card-label">
-          <div class="eyebrow">RENEWAL &amp; EXPANSION</div>
-          <h3>Renewal and expansion, Hudson Yards</h3>
+          <div class="eyebrow">NEWSLETTER SYSTEM</div>
+          <h3>Branded newsletter templates, property management firm</h3>
         </div>
       </a>
     </div>
