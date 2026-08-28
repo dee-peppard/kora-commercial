@@ -28,6 +28,10 @@
   }
   nav img { height: 72px; display: block; }
   nav .links { display: flex; gap: 32px; font-size: 13px; }
+  nav .links a, .mobile-menu a {
+    color: #000;
+    text-decoration: none;
+  }
 
   .menu-toggle { display: none; }
   .hamburger {
@@ -324,20 +328,20 @@
   <nav>
     <img src="brand-assets/kora-commercial-logo-black-transparent.png" alt="Kora Commercial logo">
     <div class="links">
-      <span>Kora Intelligence</span>
-      <span>Kora Digital</span>
-      <span>Referral Network</span>
-      <span>About</span>
+      <a href="/intelligence">Kora Intelligence</a>
+      <a href="#">Kora Digital</a>
+      <a href="#">Referral Network</a>
+      <a href="#">About</a>
     </div>
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <label for="menu-toggle" class="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </label>
     <div class="mobile-menu">
-      <span>Kora Intelligence</span>
-      <span>Kora Digital</span>
-      <span>Referral Network</span>
-      <span>About</span>
+      <a href="/intelligence">Kora Intelligence</a>
+      <a href="#">Kora Digital</a>
+      <a href="#">Referral Network</a>
+      <a href="#">About</a>
     </div>
   </nav>
 
@@ -359,7 +363,7 @@
   </section>
 
   <div class="service-grid">
-    <a href="#" class="service-card">
+    <a href="/intelligence" class="service-card">
       <img src="brand-assets/photography/building-stack-bw-square.jpg" alt="Illustrated building stacking plan showing floor-by-floor availability and pricing">
       <div class="card-label">
         <div class="eyebrow">KORA INTELLIGENCE</div>
