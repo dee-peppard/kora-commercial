@@ -214,11 +214,22 @@
     font-weight: 700;
     margin-bottom: 16px;
   }
-  .about p {
+  .about .lead {
     font-family: var(--headline-font);
     font-size: 24px;
     line-height: 1.5;
     color: #000;
+  }
+  .about .divider {
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin: 28px 0;
+  }
+  .about .body {
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #555;
   }
 
   .closing {
@@ -295,7 +306,9 @@
     .about-logo { flex: 0 0 auto; }
     .about-logo img,
     .about-logo video { width: 220px; }
-    .about p { font-size: 19px; }
+    .about .lead { font-size: 19px; }
+    .about .divider { margin: 20px 0; }
+    .about .body { font-size: 14px; }
 
     .closing { padding: 56px 20px; }
     .closing h2 { font-size: 24px; }
@@ -375,7 +388,9 @@
     </div>
     <div class="about-content">
       <div class="label">ABOUT KORA COMMERCIAL</div>
-      <p>Kora Commercial is a New York City real estate brokerage built on precision, discretion, and market fluency.</p>
+      <p class="lead">Kora Commercial is a New York City real estate brokerage built on precision, discretion, and market fluency.</p>
+      <hr class="divider">
+      <p class="body">We are an independent corporate real estate brokerage firm focused on providing high-quality, real estate advisory services to commercial agents, building owners, and high-growth companies. We recognize that every client and every transaction is unique and we tailor our work to suit each individual company and transaction. Our team has over 20+ years experience and possesses in-depth AI and market knowledge which ensures our clients receive the most relevant and innovative advice and skills available.</p>
     </div>
   </div>
 
@@ -386,7 +401,7 @@
 
   <footer>
     <div class="brandline">KORACOMMERCIAL.COM &nbsp;&middot;&nbsp; NY LICENSED REAL ESTATE BROKERAGE</div>
-    <div>hello@koracommercial.com</div>
+    <div>samantha@koracommercial.com</div>
   </footer>
 
 </div>
