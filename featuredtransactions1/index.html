@@ -151,7 +151,7 @@
 
   /* Sample deliverables */
   .deliverables {
-    padding: 96px 0 96px;
+    padding: 96px 0 48px;
   }
   .deliverables-intro {
     padding: 0 32px 32px;
@@ -185,6 +185,10 @@
     object-fit: cover;
     object-position: top;
     display: block;
+  }
+
+  .back-link {
+    padding: 0 32px 96px;
   }
 
   .closing {
@@ -243,11 +247,12 @@
     .case-section:first-of-type { padding-top: 56px; }
     .case-section .lead { font-size: 21px; }
 
-    .deliverables { padding: 56px 0 56px; }
+    .deliverables { padding: 56px 0 28px; }
     .deliverables-intro { padding: 0 20px 20px; }
     .deliverables-intro h2 { font-size: 24px; }
     .deliverables .deliverable-grid { padding: 0 20px; grid-template-columns: 1fr; gap: 16px; }
     .deliverable-card { aspect-ratio: 4 / 5; }
+    .back-link { padding: 0 20px 56px; }
 
     .closing { padding: 56px 20px; }
     .closing h2 { font-size: 24px; }
@@ -320,10 +325,14 @@
       <div class="deliverable-card">
         <img src="../brand-assets/photography/transaction1-sample3.jpg" alt="Sample deal flyer for Space 2, 90 Broad Street">
       </div>
-      <div class="deliverable-card">
+      <div class="deliverable-card" style="aspect-ratio: 1400 / 608;">
         <img src="../brand-assets/photography/transaction1-sample1.jpg" alt="Summary of options table comparing sublease space across the Financial District">
       </div>
     </div>
+  </div>
+
+  <div class="back-link">
+    <a href="/intelligence" class="cta secondary">&larr; Back to Kora Intelligence</a>
   </div>
 
   <div class="closing">
