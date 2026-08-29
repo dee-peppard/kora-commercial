@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kora Intelligence — Kora Commercial</title>
+<title>10,000 SF Headquarters Relocation — Kora Commercial</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sauce+One:wght@400;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -98,78 +98,71 @@
   }
   .hero-right {
     position: absolute;
-    top: 64px;
+    top: 56px;
     right: 0;
-    max-width: 520px;
+    max-width: 480px;
     padding: 0 32px;
     text-align: right;
   }
   .hero-right .rule {
     margin-left: auto;
   }
+  .hero-right .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #2C3E5C;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
   .hero-right h1 {
     font-family: var(--headline-font);
     font-weight: 400;
-    font-size: 56px;
-    line-height: 1.1;
+    font-size: 44px;
+    line-height: 1.15;
   }
 
-  /* Feature: stacked images left, copy right */
-  .intel-feature {
-    display: flex;
-    align-items: center;
-    gap: 56px;
-    padding: 96px 32px 48px;
+  /* Case-study narrative */
+  .case-section {
+    padding: 64px 32px 0;
+    max-width: 680px;
+  }
+  .case-section:first-of-type {
+    padding-top: 96px;
     border-top: 1px solid rgba(0,0,0,0.08);
   }
-  .intel-feature-images {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 0 0 420px;
-  }
-  .intel-feature-images img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .intel-feature-text {
-    flex: 1;
-    max-width: 460px;
-  }
-  .intel-feature-text .eyebrow {
+  .case-section .eyebrow {
     font-size: 11px;
     letter-spacing: 0.08em;
     color: #2C3E5C;
     font-weight: 700;
     margin-bottom: 16px;
   }
-  .intel-feature-text .lead {
+  .case-section .lead {
     font-family: var(--headline-font);
     font-size: 26px;
     line-height: 1.4;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
-  .intel-feature-text .body {
+  .case-section .body {
     font-size: 15px;
     line-height: 1.75;
     color: #555;
   }
 
-  /* Featured transactions */
-  .transactions {
-    padding: 48px 0 96px;
+  /* Sample deliverables */
+  .deliverables {
+    padding: 96px 0 96px;
   }
-  .transactions-intro {
+  .deliverables-intro {
     padding: 0 32px 32px;
   }
-  .transactions-intro h2 {
+  .deliverables-intro h2 {
     font-family: var(--headline-font);
     font-weight: 400;
     font-size: 32px;
     color: #000;
   }
-  .transactions .service-grid {
+  .deliverables .service-grid {
     padding: 0 32px;
   }
   .service-grid {
@@ -220,7 +213,7 @@
   .card-label h3 {
     font-family: var(--headline-font);
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.3;
     color: #fff;
   }
@@ -278,20 +271,20 @@
       text-align: left;
     }
     .hero-right .rule { margin-left: 0; }
-    .hero-right h1 { font-size: 30px; margin-bottom: 14px; }
+    .hero-right h1 { font-size: 28px; }
     .hero-visual {
       order: 2;
       padding-top: 12px;
     }
 
-    .intel-feature { flex-direction: column; gap: 24px; padding: 56px 20px 32px; }
-    .intel-feature-images { flex: 0 0 auto; width: 100%; }
-    .intel-feature-text .lead { font-size: 21px; }
+    .case-section { padding: 40px 20px 0; }
+    .case-section:first-of-type { padding-top: 56px; }
+    .case-section .lead { font-size: 21px; }
 
-    .transactions { padding: 32px 0 56px; }
-    .transactions-intro { padding: 0 20px 20px; }
-    .transactions-intro h2 { font-size: 24px; }
-    .transactions .service-grid { padding: 0 20px; grid-template-columns: 1fr; gap: 16px; }
+    .deliverables { padding: 56px 0 56px; }
+    .deliverables-intro { padding: 0 20px 20px; }
+    .deliverables-intro h2 { font-size: 24px; }
+    .deliverables .service-grid { padding: 0 20px; grid-template-columns: 1fr; gap: 16px; }
     .card-label h3 { font-size: 22px; }
 
     .closing { padding: 56px 20px; }
@@ -327,50 +320,57 @@
 
   <div class="hero-block">
     <div class="hero-visual">
-      <img src="../brand-assets/photography/building-stack-hero-full-transparent.png" alt="Illustrated building stacking plan showing floor-by-floor availability and pricing">
+      <img src="../brand-assets/photography/transaction1-hero-transparent.png" alt="Line-art illustration of the entrance to One Battery Park Plaza in Manhattan's Financial District">
     </div>
     <div class="hero-right">
       <div class="rule"></div>
-      <h1>Kora Intelligence</h1>
+      <div class="eyebrow">FINANCIAL DISTRICT</div>
+      <h1>10,000 SF Headquarters Relocation</h1>
     </div>
   </div>
 
-  <div class="intel-feature">
-    <div class="intel-feature-images">
-      <img src="../brand-assets/photography/intelligence-feature-1.jpg" alt="Line-art illustration of a conference room overlooking the Manhattan skyline">
-      <img src="../brand-assets/photography/intelligence-feature-2.jpg" alt="Line-art illustration of a broker team touring an open commercial space">
-    </div>
-    <div class="intel-feature-text">
-      <div class="eyebrow">HOW IT WORKS</div>
-      <p class="lead">AI-assisted research. Custom-built decks. Fast turnaround.</p>
-      <p class="body">Kora Intelligence pairs AI-assisted market research with hands-on deal support &mdash; from live call assistance to a fully customized deck, built around real-time market data and fitted to each broker's format. Every engagement moves fast, with most decks delivered in one to five business days, so brokers never lose momentum on a live deal.</p>
-    </div>
+  <div class="case-section">
+    <div class="eyebrow">THE BRIEF</div>
+    <p class="lead">A 10,000 SF search built around sublease value and Class&nbsp;A specs.</p>
+    <p class="body">Kora Commercial partnered with a commercial leasing broker on a tenant search for a 10,000 SF headquarters relocation into Manhattan's Financial District. The client wanted to take advantage of favorable sublease pricing in large, modern towers &mdash; prioritizing a high floor with sweeping city views, built-out space with a strong ratio of private offices, two to three conference rooms, and open work areas.</p>
   </div>
 
-  <div class="transactions">
-    <div class="transactions-intro">
-      <h2>Featured transactions</h2>
+  <div class="case-section">
+    <div class="eyebrow">HOW WE HELPED</div>
+    <p class="lead">Full research support, without adding headcount.</p>
+    <p class="body">Kora Commercial joined client calls directly alongside the broker, applied the client's criteria to a full market analysis, and built decks formatted to match the broker's own branding. We delivered numerous rounds of decks, fine-tuning the search each time based on direct client feedback &mdash; giving the broker a steady stream of vetted options without pulling them away from other work.</p>
+  </div>
+
+  <div class="case-section">
+    <div class="eyebrow">THE RESULT</div>
+    <p class="lead">One broker managed the entire deal, and kept the full commission.</p>
+    <p class="body">By taking research and deck-building off the broker's plate, Kora Commercial freed them up to focus on what mattered most: building the relationship and negotiating the deal. The broker ran this large search solo, collected the full commission, and still delivered the same high level of service their client expected.</p>
+  </div>
+
+  <div class="deliverables">
+    <div class="deliverables-intro">
+      <h2>Sample deliverables</h2>
     </div>
     <div class="service-grid">
-      <a href="/featuredtransactions1" class="service-card">
-        <img src="../brand-assets/photography/transaction1-square.jpg" alt="Line-art illustration of the entrance to One Battery Park Plaza in Manhattan's Financial District">
+      <a href="#" class="service-card">
+        <img src="../brand-assets/photography/transaction1-sample2.jpg" alt="Sample deal flyer for Space 1, 1 Battery Park Plaza">
         <div class="card-label">
-          <div class="eyebrow">TENANT REPRESENTATION</div>
-          <h3>10,000 SF headquarters relocation, Financial District</h3>
+          <div class="eyebrow">SPACE OPTION</div>
+          <h3>1 Battery Park Plaza, Partial 11th Floor</h3>
         </div>
       </a>
       <a href="#" class="service-card">
-        <img src="../brand-assets/photography/building-stack-bw-square.jpg" alt="Illustrated building stacking plan showing floor-by-floor availability and pricing">
+        <img src="../brand-assets/photography/transaction1-sample3.jpg" alt="Sample deal flyer for Space 2, 90 Broad Street">
         <div class="card-label">
-          <div class="eyebrow">SUBLEASE DISPOSITION</div>
-          <h3>Full-floor sublease disposition, Financial District</h3>
+          <div class="eyebrow">SPACE OPTION</div>
+          <h3>90 Broad Street, Partial 12th Floor</h3>
         </div>
       </a>
       <a href="#" class="service-card">
-        <img src="../brand-assets/photography/intelligence-feature-1.jpg" alt="Line-art illustration of a conference room overlooking the Manhattan skyline">
+        <img src="../brand-assets/photography/transaction1-sample1.jpg" alt="Summary of options table comparing sublease space across the Financial District">
         <div class="card-label">
-          <div class="eyebrow">RENEWAL &amp; EXPANSION</div>
-          <h3>Renewal and expansion, Hudson Yards</h3>
+          <div class="eyebrow">MARKET SUMMARY</div>
+          <h3>Summary of Options</h3>
         </div>
       </a>
     </div>
