@@ -162,25 +162,26 @@
     font-size: 32px;
     color: #000;
   }
-  .deliverables .service-grid {
+  .deliverables .deliverable-grid {
     padding: 0 32px;
   }
-  .service-grid {
+  .deliverable-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
-  .service-card {
+  .deliverable-card {
     position: relative;
     display: block;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 3 / 4;
     border-radius: 16px;
     overflow: hidden;
     text-decoration: none;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
   }
-  .service-card img {
+  .deliverable-card img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -190,17 +191,17 @@
     display: block;
     transition: transform 0.5s ease;
   }
-  .service-card::after {
+  .deliverable-card::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.18) 45%, rgba(0,0,0,0) 65%);
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.22) 22%, rgba(0,0,0,0) 42%);
   }
-  .service-card .card-label {
+  .deliverable-card .card-label {
     position: absolute;
-    left: 26px;
-    right: 26px;
-    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    bottom: 22px;
     z-index: 2;
   }
   .card-label .eyebrow {
@@ -217,11 +218,11 @@
     line-height: 1.3;
     color: #fff;
   }
-  .service-card:hover {
+  .deliverable-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 34px rgba(0,0,0,0.28);
+    box-shadow: 0 18px 34px rgba(0,0,0,0.22);
   }
-  .service-card:hover img {
+  .deliverable-card:hover img {
     transform: scale(1.06);
   }
 
@@ -284,7 +285,8 @@
     .deliverables { padding: 56px 0 56px; }
     .deliverables-intro { padding: 0 20px 20px; }
     .deliverables-intro h2 { font-size: 24px; }
-    .deliverables .service-grid { padding: 0 20px; grid-template-columns: 1fr; gap: 16px; }
+    .deliverables .deliverable-grid { padding: 0 20px; grid-template-columns: 1fr; gap: 16px; }
+    .deliverable-card { aspect-ratio: 4 / 5; }
     .card-label h3 { font-size: 22px; }
 
     .closing { padding: 56px 20px; }
@@ -351,22 +353,22 @@
     <div class="deliverables-intro">
       <h2>Sample deliverables</h2>
     </div>
-    <div class="service-grid">
-      <a href="#" class="service-card">
+    <div class="deliverable-grid">
+      <a href="#" class="deliverable-card">
         <img src="../brand-assets/photography/transaction1-sample2.jpg" alt="Sample deal flyer for Space 1, 1 Battery Park Plaza">
         <div class="card-label">
           <div class="eyebrow">SPACE OPTION</div>
           <h3>1 Battery Park Plaza, Partial 11th Floor</h3>
         </div>
       </a>
-      <a href="#" class="service-card">
+      <a href="#" class="deliverable-card">
         <img src="../brand-assets/photography/transaction1-sample3.jpg" alt="Sample deal flyer for Space 2, 90 Broad Street">
         <div class="card-label">
           <div class="eyebrow">SPACE OPTION</div>
           <h3>90 Broad Street, Partial 12th Floor</h3>
         </div>
       </a>
-      <a href="#" class="service-card">
+      <a href="#" class="deliverable-card">
         <img src="../brand-assets/photography/transaction1-sample1.jpg" alt="Summary of options table comparing sublease space across the Financial District">
         <div class="card-label">
           <div class="eyebrow">MARKET SUMMARY</div>
