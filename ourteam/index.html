@@ -177,6 +177,58 @@
     margin-top: 14px;
   }
 
+  /* Origin of the name Kora */
+  .origin-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 56px;
+    padding: 48px 32px 96px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+  .origin-feature-image {
+    flex: 0 0 420px;
+  }
+  .origin-feature-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+  }
+  .origin-feature-text {
+    flex: 1;
+    max-width: 460px;
+  }
+  .origin-feature-text .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #2C3E5C;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .origin-feature-text .lead {
+    font-family: var(--headline-font);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  .origin-feature-text .body {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #555;
+  }
+  .origin-feature-text .body + .body {
+    margin-top: 16px;
+  }
+  .origin-feature-text .citation {
+    font-size: 12px;
+    color: #777775;
+    margin-top: 16px;
+  }
+  .origin-feature-text .citation a {
+    color: #777775;
+  }
+
   .closing {
     background: #2C3E5C;
     padding: 88px 32px;
@@ -234,6 +286,11 @@
 
     .team-section { padding: 32px 0 56px; }
     .team-grid { padding: 0 20px; grid-template-columns: 1fr; gap: 32px; }
+
+    .origin-feature { flex-direction: column; gap: 24px; padding: 32px 20px 56px; }
+    .origin-feature-image { flex: 0 0 auto; width: 100%; }
+    .origin-feature-text { max-width: none; }
+    .origin-feature-text .lead { font-size: 21px; }
 
     .closing { padding: 56px 20px; }
     .closing h2 { font-size: 24px; }
@@ -299,14 +356,20 @@
         <div class="role">Licensed Real Estate Salesperson, Advisor</div>
         <p class="bio">Isis joins Kora Commercial with 15yrs of real estate experience across NY, CA, and MI. She focuses primarily on commercial leasing market analysis and advising companies and entrepreneurs in the New York City and Michigan markets. Having closed hundreds of transactions in New York City and Los Angeles, partnering with a ranked Top 25 Agent in Manhattan and with the Theodore Roosevelt Family fund, Isis&rsquo; pedigree for discretion, honesty, and client dedication surpasses most.</p>
       </div>
-      <div class="team-card">
-        <div class="team-photo">
-          <img src="../brand-assets/photography/team-cassandra-transparent.png" alt="Portrait illustration of Cassie Peppard">
-        </div>
-        <h3>Cassie Peppard</h3>
-        <div class="role">Director</div>
-        <p class="bio">Prior to joining Kora Commercial, Cassie spent 5+ years leading technical sales teams and partnerships for Cisco Meraki across South America and the Southeast US markets. With start-up activation experience in healthcare, communications, and education, Cassie leverages her networks and technology know-how to elevate Kora Commercial&rsquo;s presence in the New York market.</p>
-      </div>
+    </div>
+  </div>
+
+  <div class="origin-feature">
+    <div class="origin-feature-image">
+      <img src="../brand-assets/photography/parcdelavillette-illustration.jpg" alt="Architectural plan illustration of Parc de la Villette in Paris">
+    </div>
+    <div class="origin-feature-text">
+      <div class="eyebrow">THE NAME</div>
+      <p class="lead">Where the name &ldquo;Kora&rdquo; comes from.</p>
+      <p class="body">Kora takes its name from the ancient Greek χώρα, originally spelled &ldquo;chora,&rdquo; which described the empty land surrounding the city of Alexandria.</p>
+      <p class="body">The term was revived in 1985 through the unrealized design collaboration of philosopher Jacques Derrida and architect Peter Eisenman for a garden at Parc de la Villette in Paris. Inspired by Plato&rsquo;s concept of ch&ocirc;ra (or kh&ocirc;ra) from the Timaeus, their design sought to merge deconstructivist philosophy with spatial architecture.</p>
+      <p class="body">Chora came to mean a space, room, or interval between the sensible and intelligible realms &mdash; waiting to be filled.</p>
+      <p class="citation">Source: <a href="https://utppublishing.com/doi/abs/10.3138/utq.83.3.739" target="_blank" rel="noopener">University of Toronto Press</a></p>
     </div>
   </div>
 
