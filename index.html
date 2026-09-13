@@ -236,21 +236,95 @@
     color: #555;
   }
 
-  .closing {
-    background: #2C3E5C;
-    padding: 88px 32px;
-    text-align: center;
+  /* Contact form */
+  .contact {
+    padding: 96px 32px;
+    border-top: 1px solid rgba(0,0,0,0.08);
   }
-  .closing h2 {
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+  }
+  .contact-intro .label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #777775;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .contact-intro h2 {
     font-family: var(--headline-font);
     font-weight: 400;
     font-size: 32px;
-    color: #fff;
-    max-width: 640px;
-    margin: 0 auto 28px;
-    line-height: 1.35;
+    line-height: 1.3;
+    margin-bottom: 32px;
   }
-  .closing .cta { background: #fff; color: #2C3E5C; }
+  .contact-info-item {
+    margin-bottom: 20px;
+  }
+  .contact-info-item .info-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #777775;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .contact-info-item .info-value {
+    font-size: 15px;
+  }
+  .contact-info-item .info-value a {
+    color: #2C3E5C;
+    text-decoration: none;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .contact-form .form-row {
+    display: flex;
+    gap: 18px;
+  }
+  .contact-form .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .contact-form label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 14px;
+    padding: 12px 14px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    background: #fff;
+    color: #000;
+  }
+  .contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #2C3E5C;
+  }
+  .contact-form .form-submit {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    font-family: 'Open Sauce One', sans-serif;
+  }
+
 
   footer {
     padding: 40px 32px;
@@ -314,9 +388,10 @@
     .about .divider { margin: 20px 0; }
     .about .body { font-size: 14px; }
 
-    .closing { padding: 56px 20px; }
-    .closing h2 { font-size: 24px; }
-    .closing .cta { width: auto; }
+    .contact { padding: 56px 20px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-intro h2 { font-size: 24px; }
+    .contact-form .form-row { flex-direction: column; gap: 18px; }
 
     footer { padding: 28px 20px; flex-direction: column; gap: 8px; }
   }
@@ -398,9 +473,54 @@
     </div>
   </div>
 
-  <div class="closing">
-    <h2>Precision and discretion,<br>built into every deal.</h2>
-    <a href="mailto:samantha@koracommercial.com" class="cta">Get in touch</a>
+  <div class="contact">
+    <div class="contact-grid">
+      <div class="contact-intro">
+        <div class="label">CONTACT</div>
+        <h2>Get in touch today.</h2>
+        <div class="contact-info-item">
+          <div class="info-label">Email</div>
+          <div class="info-value"><a href="mailto:samantha@koracommercial.com">samantha@koracommercial.com</a></div>
+        </div>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <!-- Sign up at formspree.io, create a new form for koracommercial.com, and replace YOUR_FORM_ID above -->
+        <input type="hidden" name="_subject" value="New Enquiry from koracommercial.com">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="first_name" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="last_name" placeholder="Doe" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" name="phone" placeholder="(555) 000-0000">
+        </div>
+        <div class="form-group">
+          <label>I&rsquo;m Interested In</label>
+          <select name="service">
+            <option value="" disabled selected>Select a service</option>
+            <option>Kora Intelligence</option>
+            <option>Kora Digital</option>
+            <option>Referral Network</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell me about your project or requirements..."></textarea>
+        </div>
+        <button type="submit" class="cta form-submit">Send Message</button>
+      </form>
+    </div>
   </div>
 
   <footer>
