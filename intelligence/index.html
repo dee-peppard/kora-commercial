@@ -156,6 +156,11 @@
     color: #555;
   }
 
+  /* Phone image repeated inline in the text column, shown only on mobile */
+  .intel-feature-mobile-img {
+    display: none;
+  }
+
   /* Silent Partner / Active Partner */
   .partner-options-intro {
     margin: 40px 0 24px;
@@ -314,6 +319,7 @@
 
     .intel-feature { flex-direction: column; gap: 24px; padding: 56px 20px 32px; }
     .intel-feature-images { display: none; }
+    .intel-feature-mobile-img { display: block; width: 100%; max-width: 300px; height: auto; margin: 36px auto 0; }
     .intel-feature-text .lead { font-size: 21px; }
 
     .partner-options-intro { margin: 28px 0 20px; }
@@ -369,26 +375,19 @@
 
   <div class="intel-feature">
     <div class="intel-feature-images">
-      <img src="../brand-assets/photography/building-stack-tall-transparent.jpg" alt="Illustrated building stacking plan showing floor-by-floor availability and pricing">
+      <img src="../brand-assets/photography/mobile-deck-phone-transparent.jpg" alt="Illustrated smartphone displaying a New York City Space Survey deck with side-by-side listings">
     </div>
     <div class="intel-feature-text">
       <div class="eyebrow">HOW IT WORKS</div>
       <p class="lead">Kora Intelligence offers commercial brokerage clients hands-on customer and deal support.</p>
       <p class="body">Structured however the agent would like, Kora Intelligence connects agents with the speed of AI tools and 15+ years of market knowledge and research. Every engagement moves fast, with most decks delivered in one to five business days, so brokers never lose momentum on a live deal.</p>
 
+      <img class="intel-feature-mobile-img" src="../brand-assets/photography/mobile-deck-phone-transparent.jpg" alt="Illustrated smartphone displaying a New York City Space Survey deck with side-by-side listings">
+
       <div class="partner-options-intro">
-        <p class="lead">Leverage Kora Intelligence on your deals as a Silent Partner or an Active Partner.</p>
+        <p class="lead">Mobile Space Survey Decks</p>
       </div>
-      <div class="partner-text">
-        <div class="partner-item">
-          <div class="eyebrow">SILENT PARTNER</div>
-          <p class="body">Bring your client's search criteria to Kora Commercial as a Silent Partner to receive extensive market research and Space Survey decks formatted in your company's branding.</p>
-        </div>
-        <div class="partner-item">
-          <div class="eyebrow">ACTIVE PARTNER</div>
-          <p class="body">Kora Intelligence's Active Partner will offer live call assistance by joining calls with the agent and their clients to gather information for their search directly. Kora Intelligence will deliver decks directly to the client, ask questions, and receive feedback.</p>
-        </div>
-      </div>
+      <p class="body">Kora Intelligence's Mobile Decks &amp; Tour Guides allow you and your clients to access their decks from their cell phones on a more intuitive, technology-forward platform.</p>
     </div>
   </div>
 
